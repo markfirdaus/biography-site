@@ -1,0 +1,66 @@
+/* we can apply style to a high level element like body, in which case these will become the defaults for all children */
+body {
+  background-color: whitesmoke;
+  font-family: cursive, serif;
+  /* we can center the content on the page by specify a fixed width and setting the horizontal margin to auto */
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+/* we can then apply styles to all elements of a specific type eg section */
+nav {
+  background-color: #eee;
+  padding: 20px;
+}
+
+footer {
+  border-top: 1px solid grey;
+  font-size: 0.8em;
+  text-align: center;
+}
+
+section {
+  background-color: white;
+  border-radius: 5px; /* will give rounded corners */
+  padding: 0 10px 0 10px;
+}
+
+h3 {
+  text-decoration: underline;
+}
+
+/* generally using classes is the best approach for styling as it allows most flexibility */
+.portfolio {
+  border: 1px solid black;
+  margin-bottom: 10px;
+  padding: 10px; /* overwrites the default padding for a section */
+}
+
+.nav-links {
+  text-align: right;
+}
+.selected {
+  color: grey;
+}
+
+/* we can apply a set of styles to multiple selectors by seperating them with a comma */
+.biography,
+.portfolio {
+  display: flex; /* this will get all child elements to be placed nicely in columns */
+}
+
+/* IDs are not considered best practice, but this is how you do it anyway */
+#main-title {
+  text-transform: uppercase;
+}
+
+/* more advanced selectors allow us to focus in on conent without needing to add additional classes */
+/* increase the font size of the first paragraph we find */
+p:first-of-type {
+  font-size: 1.25em;
+}
+
+/* add a cool hover effect to our links */
+a:hover {
+  color: red;
+}
